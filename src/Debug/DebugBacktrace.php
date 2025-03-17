@@ -12,7 +12,7 @@ class DebugBacktrace
         $trace = array_values(array_filter($trace, function($item) {
             $file = $item['file'] ?? '';
             return !empty($file) 
-                && strpos($file, '/php-pdo-logger/src') === false
+                && strpos($file, '/PowerPdo/src') === false
                 && strpos($file, 'vendor/phpunit') === false;
         }));
 
