@@ -1,0 +1,39 @@
+name: Run Demo
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    name: Run Demo Application
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: pdo, sqlite
+        tools: composer:v2
+    
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress
+    
+    - name: Run demo application
+      run: |
+        cd demo
+        php index.php
+        
+    - name: Verify demo log file was created
+      run: |
+        if [ ! -f demo/demo.log ]; then
+          echo "Demo log file was not created"
+          exit 1
+        fi
+        echo "Demo log file was created successfully"
+        cat demo/demo.log
