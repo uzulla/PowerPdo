@@ -1,0 +1,506 @@
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "exec",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:34",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:34 */ CREATE TABLE IF NOT EXISTS products (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            name TEXT NOT NULL,\n            price REAL NOT NULL,\n            description TEXT\n        )",
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 34,
+                "function": "exec",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 29,
+                "function": "initDatabase",
+                "class": "Demo\\DemoProductRepository"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 36,
+                "function": "__construct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "exec_result",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:34",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:34 */ CREATE TABLE IF NOT EXISTS products (\n            id INTEGER PRIMARY KEY AUTOINCREMENT,\n            name TEXT NOT NULL,\n            price REAL NOT NULL,\n            description TEXT\n        )",
+        "result": 0,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 34,
+                "function": "exec",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 29,
+                "function": "initDatabase",
+                "class": "Demo\\DemoProductRepository"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 36,
+                "function": "__construct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "prepare",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "options": [],
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 44,
+                "function": "prepare",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:45",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "params": {
+            "name": "Laptop",
+            "price": 999.99,
+            "description": "High-performance laptop"
+        },
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 45,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute_result",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:45",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "params": {
+            "name": "Laptop",
+            "price": 999.99,
+            "description": "High-performance laptop"
+        },
+        "result": true,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 45,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "prepare",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "options": [],
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 44,
+                "function": "prepare",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:45",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "params": {
+            "name": "Smartphone",
+            "price": 499.99,
+            "description": "Latest smartphone model"
+        },
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 45,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute_result",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:45",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "params": {
+            "name": "Smartphone",
+            "price": 499.99,
+            "description": "Latest smartphone model"
+        },
+        "result": true,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 45,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "prepare",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "options": [],
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 44,
+                "function": "prepare",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:45",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "params": {
+            "name": "Headphones",
+            "price": 149.99,
+            "description": "Noise-cancelling headphones"
+        },
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 45,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute_result",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:45",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:44 */ INSERT INTO products (name, price, description) VALUES (:name, :price, :description)",
+        "params": {
+            "name": "Headphones",
+            "price": 149.99,
+            "description": "Noise-cancelling headphones"
+        },
+        "result": true,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 45,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 54,
+                "function": "addProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "query",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:56",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:56 */ SELECT * FROM products ORDER BY price DESC",
+        "fetchMode": null,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 56,
+                "function": "query",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 60,
+                "function": "getAllProducts",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "prepare",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:61",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:61 */ UPDATE products SET price = :price WHERE name = :name",
+        "options": [],
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 61,
+                "function": "prepare",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 69,
+                "function": "updateProductPrice",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:62",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:61 */ UPDATE products SET price = :price WHERE name = :name",
+        "params": {
+            "price": 129.99,
+            "name": "Headphones"
+        },
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 62,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 69,
+                "function": "updateProductPrice",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute_result",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:62",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:61 */ UPDATE products SET price = :price WHERE name = :name",
+        "params": {
+            "price": 129.99,
+            "name": "Headphones"
+        },
+        "result": true,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 62,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 69,
+                "function": "updateProductPrice",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "prepare",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:70",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:70 */ DELETE FROM products WHERE name = :name",
+        "options": [],
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 70,
+                "function": "prepare",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 74,
+                "function": "deleteProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:71",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:70 */ DELETE FROM products WHERE name = :name",
+        "params": {
+            "name": "Smartphone"
+        },
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 71,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 74,
+                "function": "deleteProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "execute_result",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:71",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:70 */ DELETE FROM products WHERE name = :name",
+        "params": {
+            "name": "Smartphone"
+        },
+        "result": true,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 71,
+                "function": "execute",
+                "class": "PowerPdo\\Core\\PDOStatementLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 74,
+                "function": "deleteProduct",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
+{
+    "timestamp": "2025-03-17T07:05:43+00:00",
+    "action": "query",
+    "caller": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:56",
+    "data": {
+        "query": "/* Called from: /home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php:56 */ SELECT * FROM products ORDER BY price DESC",
+        "fetchMode": null,
+        "trace": [
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/src/DemoProductRepository.php",
+                "line": 56,
+                "function": "query",
+                "class": "PowerPdo\\Core\\PDOLogger"
+            },
+            {
+                "file": "/home/ubuntu/php-pdo-logger/demo/index.php",
+                "line": 79,
+                "function": "getAllProducts",
+                "class": "Demo\\DemoProductRepository"
+            }
+        ]
+    }
+}
+---
